@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// Some Dwarfs
 Dwarf sleepy = new Dwarf();
 sleepy.setName("Sleepy");
 sleepy.setAuthor("Disney");
