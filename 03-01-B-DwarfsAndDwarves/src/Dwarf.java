@@ -3,6 +3,12 @@ public class Dwarf {
 public Dwarf() {
 		super();
 	}
+
+public Dwarf(String name, String author, String image) {
+	this.name= name;
+	this.author= author;
+	this.image=image;
+}
 private String name;
 private String author;
 private String image;

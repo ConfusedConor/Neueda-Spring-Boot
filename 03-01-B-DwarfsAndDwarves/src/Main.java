@@ -48,8 +48,39 @@ dwarfs.add(sneezy);
 dwarfs.add(grumpy);
 dwarfs.add(doc);
 
-for(Dwarf dwarf:dwarfs)
-	System.out.println(dwarf.getName());
-	}
+//for(Dwarf dwarf:dwarfs)
+//	System.out.println(dwarf.getName());
 
+Dwarf thorin = new Dwarf("Thorin", "Tolkien", "thorin.png");
+Dwarf balin = new Dwarf("Balin", "Tolkien", "balin.png");
+Dwarf dwalin = new Dwarf("Dwalin", "Tolkien", "dwalin.png");
+Dwarf fili = new Dwarf("Fili", "Tolien", "fili.png");
+Dwarf kili = new Dwarf("Kili", "Tolkien","kili.png");
+Dwarf dori = new Dwarf("Dori", "Tolkien", "dori.png");
+Dwarf nori = new Dwarf("Nori", "Tolkien", "nori.png");
+Dwarf ori = new Dwarf("Ori", "Tolkien", "ori.png");
+Dwarf oin = new Dwarf("Oin", "Tolkien","oin.png");
+Dwarf gloin= new Dwarf("Gloin", "Tolkien", "gloin.png");
+Dwarf bifur= new Dwarf("Bifur", "Tolkien", "bifur.png");
+Dwarf bofur = new Dwarf("Bofur", "Tolkien", "bofur.png");
+Dwarf bombur = new Dwarf("Bombur", "Tolkien", "bombur.png");
+
+dwarfs.add(thorin);
+dwarfs.add(balin);
+dwarfs.add(dwalin);
+dwarfs.add(fili);
+dwarfs.add(kili);
+dwarfs.add(dori);
+dwarfs.add(nori);
+dwarfs.add(ori);
+dwarfs.add(oin);
+dwarfs.add(gloin);
+dwarfs.add(bifur);
+dwarfs.add(bofur);
+dwarfs.add(bombur);
+
+for(Dwarf dwarf:dwarfs)
+		System.out.println(dwarf.getName());
+	}
+	
 }
