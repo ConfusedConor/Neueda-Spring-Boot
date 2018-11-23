@@ -1,0 +1,26 @@
+<!Doctype HTML>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<title th:text="${pageTitle}"> Welcome Home</title>
+<!-- Import -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav th:replace="layouts/nav :: navFragment"></nav>
+<div class="container-fluid">
+<div class="jumbotron">
+  <h1 class="display-4" style="font-family: 'Fanwood Text', serif;">What are the biggest buildings in the world?</h1>
+  <p class="lead" style="font-family: 'Fanwood Text', serif;">Well, it depends on what metric you're using.</p>
+  <img src="img/big.jpg">
+  <hr class="my-4">
+  <p style="font-family: 'Fanwood Text', serif;">Choose from above and explore.</p>
+  <a class="btn btn-primary btn-lg" href="floorarea" role="button">By Floor Area</a>
+  <a class="btn btn-primary btn-lg" href="volume" role="button">By Volume</a>
+  <a class="btn btn-primary btn-lg" href="footprint" role="button">By Footprint</a>
+</div>
+</div>
+<footer th:replace="layouts/footer :: footerFragment"></footer>
+</body>
+</html>

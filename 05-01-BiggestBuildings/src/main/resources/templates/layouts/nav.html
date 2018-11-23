@@ -1,0 +1,32 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+<!-- Beginning Navbar -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" th:fragment="navFragment">
+  <a class="navbar-brand" href="/">Would ye look at the size O' that!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavBarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="NavBarContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="volume">Biggest by Volume</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="footprint">Biggest by Footprint</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="floorarea">Biggest by Floor Area</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</body>
+</html>

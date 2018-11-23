@@ -1,0 +1,33 @@
+<!Doctype HTML>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<title th:text="${pageTitle}"> ByFootprint</title>
+<!-- Import -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav th:replace="layouts/nav :: navFragment"></nav>
+<div class="container-fluid">
+
+<div class="row" style="padding:40px;">
+<div class="card" style="width: 30%; margin-right:25px; " th:each="footprints: ${footprints}">
+  <img class="card-img-top" src="../static/img/bv2.jpg" style="height: 400px; width: 100%;" th:src="@{/img/}+${footprints.image}" alt="Image">
+  <div class="card-body">
+    <h5 class="card-title" th:text="${footprints.name}">Building Name</h5>
+    <p class="card-text" th:text="${footprints.country}">Country</p>
+    <p class="card-text" th:text="${footprints.place}">Place</p>
+    <p class="card-text" th:text="${footprints.footprint}">Footprint</p>
+    <p class="card-text" th:text="${footprints.lengthbywidth}">Length By Width</p>
+    <p class="card-text" th:text="${footprints.description}">Description</p>
+    <p class="card-text" th:utext="${footprints.map}">Location</p>
+  </div>
+  
+</div>
+</div><!-- End of Card -->
+
+</div>
+<footer th:replace="layouts/footer :: footerFragment"></footer>
+</body>
+</html>
