@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="01-HelloStringBoot/src/main/java"/>
+	<classpathentry kind="src" path="01-HelloStringBoot/src/test/java"/>
+	<classpathentry kind="src" path="02-01-SpaceX/src/main/java"/>
+	<classpathentry kind="src" path="02-01-SpaceX/src/test/java"/>
+	<classpathentry kind="src" path="03-01-A-Java-DwarfsAndDwarves/src"/>
+	<classpathentry kind="src" path="03-01-B-DwarfsAndDwarves/src"/>
+	<classpathentry kind="src" path="03-02-Toystory/src"/>
+	<classpathentry kind="src" path="03-03-SpringBootControllers/src/main/java"/>
+	<classpathentry kind="src" path="03-03-SpringBootControllers/src/test/java"/>
+	<classpathentry kind="src" path="04-01-SpringBootDwarfs/src/main/java"/>
+	<classpathentry kind="src" path="04-01-SpringBootDwarfs/src/test/java"/>
+	<classpathentry kind="src" path="04-02-SpringBootTest/src/main/java"/>
+	<classpathentry kind="src" path="04-02-SpringBootTest/src/test/java"/>
+	<classpathentry kind="lib" path="01-HelloStringBoot/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="02-01-SpaceX/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="03-03-SpringBootControllers/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="04-01-SpringBootDwarfs/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="04-02-SpringBootTest/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="output" path="03-01-A-Java-DwarfsAndDwarves/bin"/>
+</classpath>
