@@ -3,7 +3,7 @@ public class Dwarf {
 public Dwarf() {
 		super();
 	}
-
+// Testing editing from within GITHUB itself
 public Dwarf(String name, String author, String image) {
 	this.name= name;
 	this.author= author;
