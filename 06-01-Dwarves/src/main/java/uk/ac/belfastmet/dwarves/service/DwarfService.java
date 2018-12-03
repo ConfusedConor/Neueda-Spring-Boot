@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class DwarfService {
 	public DwarfService(){super();}
-	public ArrayList<Dwarf> getDisneyDwarfs(){
+public ArrayList<Dwarf> getDisneyDwarfs(){
 	
-	ArrayList<Dwarf> dwarfs = new ArrayList<Dwarf>();
+	 ArrayList<Dwarf> dwarfs = new ArrayList<Dwarf>();
 	
 	//Disney Dwarfs
-	
+	/*
 			Dwarf sleepy = new Dwarf("Sleepy","Disney","sleepy.png");
 			dwarfs.add(sleepy);
 			Dwarf happy = new Dwarf("Happy","Disney","happy.png");
@@ -24,13 +24,16 @@ public class DwarfService {
 			dwarfs.add(doc);
 			Dwarf grumpy = new Dwarf("Grumpy","Disney","grumpy.png");
 			dwarfs.add(grumpy);
+			*/
 			return dwarfs;
+			
 }
 		public ArrayList<Dwarf> getTolkienDwarfs(){
 	
-	ArrayList<Dwarf> dwarfs = new ArrayList<Dwarf>();
+		
+	 ArrayList<Dwarf> dwarfs = new ArrayList<Dwarf>();
 	//Tolkien Dwarves
-
+/*
 			Dwarf thorin = new Dwarf("Thorin", "Tolkien", "thorin.png");
 			dwarfs.add(thorin);
 			Dwarf balin = new Dwarf("Balin", "Tolkien", "balin.png");
@@ -57,6 +60,8 @@ public class DwarfService {
 			dwarfs.add(bofur);
 			Dwarf bombur = new Dwarf("Bombur", "Tolkien", "bombur.png");
 			dwarfs.add(bombur);
+			*/
 			return dwarfs;
-}
+			
+} 
 }

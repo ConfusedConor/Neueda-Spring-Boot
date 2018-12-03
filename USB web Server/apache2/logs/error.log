@@ -1,0 +1,5 @@
+[Mon Dec 03 12:15:39.603545 2018] [mpm_winnt:notice] [pid 428:tid 832] AH00455: Apache/2.4.6 (Win32) PHP/5.4.17 configured -- resuming normal operations
+[Mon Dec 03 12:15:39.603545 2018] [mpm_winnt:notice] [pid 428:tid 832] AH00456: Apache Lounge VC10 Server built: Jul 16 2013 11:15:41
+[Mon Dec 03 12:15:39.603545 2018] [core:notice] [pid 428:tid 832] AH00094: Command line: 'C:\\Users\\MCE18161675\\Documents\\Neueda-Spring-Boot\\USB web Server/apache2/bin/httpd_usbwv8.exe -d C:/Users/MCE18161675/Documents/Neueda-Spring-Boot/USB web Server/apache2'
+[Mon Dec 03 12:15:39.619171 2018] [mpm_winnt:notice] [pid 428:tid 832] AH00418: Parent: Created child process 7988
+[Mon Dec 03 12:15:40.751559 2018] [mpm_winnt:notice] [pid 7988:tid 848] AH00354: Child: Starting 64 worker threads.
