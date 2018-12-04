@@ -6,4 +6,6 @@ import uk.ac.belfastmet.titanic.domain.Passenger;
 
 public interface PassengerRepository extends CrudRepository<Passenger, Integer> {
 
+	Object findByName(String name);
+
 }
