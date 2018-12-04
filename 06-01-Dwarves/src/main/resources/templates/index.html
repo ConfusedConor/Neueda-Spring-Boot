@@ -22,15 +22,40 @@
   <a class="btn btn-primary btn-lg" href="/tolkien" role="button">Tolkien</a>
 </div>
 <!-- End Jumbo -->
-<form>
-  <div class="form-group">
-    <label for="dwarfSearch">Which Dwarf do you want to find?</label>
-    <input type="text" class="form-control" id="searchValue" aria-describedby="search" placeholder="So many to choose from!">
-    <small id="search" class="form-text text-muted">Can you even remember their names?</small>
-  </div>
-  
-  <button type="submit" class="btn btn-primary">FIND THAT DWARF!</button>
+
+ <!-- Search Field --> 
+<form action="/searchid" method="post">
+    <label>DwarfId</label>
+    <input type="text" name="id"></input>
+    <input type="submit" value="Search"></input>
 </form>
+ <!-- End of Search -->
+  <!-- Search Field --> 
+<form action="/searchname" method="post">
+    <label>Name</label>
+    <input type="text" name="name"></input>
+    <input type="submit" value="Search"></input>
+</form>
+ <!-- End of Search -->
+ 
+ <!-- Search Field --> 
+<form action="/searchauthor" method="post">
+    <label>Author</label>
+    <input type="text" name="author"></input>
+    <input type="submit" value="Search"></input>
+</form>
+
+<form action="/searchnameauthor" method="post">
+    <label>Name</label>
+    <input type="text" name="name"></input> 
+     <label>Author</label>
+    <input type="text" name="author"></input>
+    <input type="submit" value="Search"></input>
+</form>
+ <!-- End of Search -->
+
+ 
+ 
 </div><!-- End of Dark Container -->
 </body>
 <!-- Import Bootstrap Componenets -->
