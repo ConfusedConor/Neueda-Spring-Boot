@@ -19,7 +19,7 @@ public class CrudController {
 		this.dwarfRepository = dwarfRepository;
 	}
 	
-	//View an individual dwarf
+	//View an individual dwarf|
 	@GetMapping("/view/{dwarfId}")
 	public String viewDwarf(@PathVariable("dwarfId") Integer dwarfId, Model model)
 	{
