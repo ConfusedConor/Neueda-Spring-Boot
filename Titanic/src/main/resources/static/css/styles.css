@@ -1,0 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css?family=Cardo|Elsie+Swash+Caps');
+.jumbotron{
+p {font-family: 'Elsie Swash Caps', cursive;}
+}
+.display-4 {font-family: 'Elsie Swash Caps', cursive;}
+.lead {font-family: 'Elsie Swash Caps', cursive;}
+p {font-family: 'Cardo', serif;}
+.table {
+	p{font-family: 'Cardo', serif;}
+	td{font-family: 'Cardo', serif;}
+}
+#tbody{font-family: 'Cardo', serif;}

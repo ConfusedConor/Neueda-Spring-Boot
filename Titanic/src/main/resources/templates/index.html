@@ -9,7 +9,14 @@
 <body>
 <nav th:replace="layouts/resources :: navFragment"></nav>
 <div class="container-fluid">
-<h1>Hello, Site in Progress...</h1>
+<!-- Main Jumbotron -->
+<div class="jumbotron">
+  <h1 class="display-4">Welcome to the H.M.S. Titanic Passenger Records</h1>
+  <p class="lead">Find out more about passengers aboard the tragic ship.</p>
+  <hr class="my-4">
+  <p>Search for a specific passenger, or hit the button below to see all passengers.</p>
+  <a class="btn btn-primary btn-lg" href="/all" role="button">See All.</a>
+</div>
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
