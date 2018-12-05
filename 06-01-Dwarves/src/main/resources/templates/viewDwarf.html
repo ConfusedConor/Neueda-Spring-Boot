@@ -14,36 +14,13 @@
 <body>
 <nav th:replace="layouts/nav :: navFragment"></nav>
 <div class="Container darkContainer">
-<!-- JumboTron -->
-<div class="jumbotron">
-  <h1 class="display-4" th:text="${headerTitle}">Dwarfs be here...</h1>
-  <p class="lead" th:text="${subheaderTitle}">Those of Disney are known as Dwarfs</p>
-  <hr class="my-4">
-  <p>The members lie below</p>
-  <a class="btn btn-primary btn-lg" href="/disney" role="button">Disney</a>
-  <a class="btn btn-primary btn-lg" href="/tolkien" role="button">Tolkien</a>
-</div>
-<!-- End Jumbo -->
-
 <!-- Table -->
 
 <table class = "table striped">
-<thead>
-	<th>Name</th>
-	<th>Author</th>
-	<th>Image</th>
-	<th>Change?</th>
- </thead> 
-<tbody>
-<tr th:each="dwarf: ${disneyDwarfs}">
-<td th:text="${dwarf.name}">Happy</td>
-<td th:text="${dwarf.author}">Disney</td>
-<td> <img src="..static/image/happy.png" th:src="@{/image/}+${dwarf.image}"></td>
-<td><a href="view" th:href="@{/view/}+${dwarf.dwarfId}">View</a>
-<br></br><a href="#" th:href="@{/edit/}+${dwarf.dwarfId}">Edit</a>
-<br></br><a href="#" th:href="@{/delete/}+${dwarf.dwarfId}">Delete</a></td>
-</tr>
-</tbody>
+<tr><td>Dwarf ID</td><td th:text="${dwarf.dwarfId}">Dwarf ID</td></tr>
+<tr><td>Name</td><td th:text="${dwarf.name}">Happy</td></tr>
+<tr><td>Author</td><td th:text="${dwarf.author}">Disney</td></tr>
+<tr><td>Image</td><td> <img src="..static/image/happy.png" th:src="@{/image/}+${dwarf.image}"></td></tr>
 </table>
 </div><!-- End of Dark Container -->
 </body>

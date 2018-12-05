@@ -6,7 +6,12 @@
   margin-right: auto;
   margin-left: auto;
 }
-p .darkContainer{color: #fff;
+.table{font-family: 'Cormorant Infant', serif;
+color:#FFF;
+font-size:16;}
+a.table{color:#FFF;}
+a.darkContainer{color:#FFF;} 
+p.darkContainer{color: #fff;
 font-family: 'Cormorant Infant', serif;}
 h1, h2, h3, h4, h5 .darkContainer{color:#FFD700
 font-family: 'Fanwood Text', serif;}
@@ -23,3 +28,6 @@ nav-link{font-family: 'Fanwood Text', serif;}
 	border: 5px;
 }
 nav{font-family: 'Fanwood Text', serif;}
+
+img {width: 140px;
+height: 220px;}
