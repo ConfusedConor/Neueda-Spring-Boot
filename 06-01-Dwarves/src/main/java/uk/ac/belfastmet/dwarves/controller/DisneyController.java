@@ -26,8 +26,14 @@ public class DisneyController {
 		model.addAttribute("subheaderTitle", "Walts 7 are down there!");
 
 		return "dwarfPage.html";
-	
-	
+	}
+	@GetMapping("/all")
+	public String all(Model model) {
+		model.addAttribute("disneyDwarfs", this.dwarfRepository.findAll());
+		model.addAttribute("pageTitle", "All the Dwarfs!");
+		model.addAttribute("headerTitle", "All the dwarfs!");
+		model.addAttribute("subheaderTitle", "Disney & Tolkien!");
+		return "dwarfPage.html";
 	}
 	}
 

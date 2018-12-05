@@ -12,6 +12,9 @@
 <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Fanwood+Text|Great+Vibes" rel="stylesheet" />
 </head>
 <body>
+<div class="alert alert-success" role="alert" th:if="${message}">
+<p th:text="${message}"></p>
+</div>
 <nav th:replace="layouts/nav :: navFragment"></nav>
 <div class="Container darkContainer">
 <!-- JumboTron -->
@@ -40,8 +43,8 @@
 <td th:text="${dwarf.author}">Disney</td>
 <td> <img src="..static/image/happy.png" th:src="@{/image/}+${dwarf.image}"></td>
 <td><a href="view" th:href="@{/view/}+${dwarf.dwarfId}">View</a>
-<br></br><a href="#" th:href="@{/edit/}+${dwarf.dwarfId}">Edit</a>
-<br></br><a href="#" th:href="@{/delete/}+${dwarf.dwarfId}">Delete</a></td>
+<br></br><a href="edit" th:href="@{/edit/}+${dwarf.dwarfId}">Edit</a>
+<br></br><a href="delete" th:href="@{/delete/}+${dwarf.dwarfId}">Delete</a></td>
 </tr>
 </tbody>
 </table>

@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import uk.ac.belfastmet.dwarves.repository.DwarfRepository;
 
@@ -19,6 +20,19 @@ public class CrudController {
 	}
 	@GetMapping("/view/{dwarfId}")
 	public String viewDwarf(@PathVariable("dwarfId") Integer dwarfId, Model model)
+	{
+		model.addAttribute("dwarf", this.dwarfRepository.findByDwarfId(dwarfId));
+		model.addAttribute("pageTitle","Viewing Dwarfs");
+		return "viewDwarf";}
+	@GetMapping("/delete/{dwarfId}")
+	public String deleteDwarf(@PathVariable("dwarfId") Integer dwarfId, Model model, RedirectAttributes redirectattributes)
+	{this.dwarfRepository.deleteById(dwarfId);
+	redirectattributes.addFlashAttribute("message", "Dwarf has been Thanos CLicked");
+	return "redirect:/all";
+	}
+	@GetMapping("/edit/{dwarfId}")
+	
+	public String editDwarf(@PathVariable("dwarfId") Integer dwarfId, Model model)
 	{
 		model.addAttribute("dwarf", this.dwarfRepository.findByDwarfId(dwarfId));
 		model.addAttribute("pageTitle","Viewing Dwarfs");
