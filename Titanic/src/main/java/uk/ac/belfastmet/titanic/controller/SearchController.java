@@ -26,7 +26,8 @@ public class SearchController {
 @PostMapping("/searchName")
 public String searchName(@RequestParam("name") String name, Model model)
 {
-	model.addAttribute("passenger", this.passengerRepository.findByName(name));
+	model.addAttribute("passenger", this.passengerRepository.findAllByNameContaining(name));
 	model.addAttribute("pageTitle","Search by Name!");
 	return "passengerPage";}
 }
+
