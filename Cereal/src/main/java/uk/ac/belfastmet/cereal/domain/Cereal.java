@@ -23,6 +23,13 @@ private Double sodium;
 private Double salt;
 private Double iron;
 
+
+
+public Cereal() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+
 public Cereal(Integer cerealId, String manufacturer, String cereal, Double energyKj, Double energyKcal, Double protein,
 		Double carbohydrate, Double sugar, Double fat, Double saturates, Double fibre, Double sodium, Double salt,
 		Double iron) {

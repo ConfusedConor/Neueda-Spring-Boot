@@ -30,7 +30,20 @@
 	<th>Iron (mg)</th>
  </thead> 
 <tbody>
-
+<tr th:each="cereal: ${cereal}">
+<td th:text="${cereal.manufacturer}">Manufacturer</td>
+<td th:text="${cereal.cereal}">Cereal Name</td>
+<td th:text="${cereal.energyKj}">Energy</td>
+<td th:text="${cereal.energyKcal}">Energy</td>
+<td th:text="${cereal.protein}">Protein</td>
+<td th:text="${cereal.carbohydrate}">Carbs</td>
+<td th:text="${cereal.sugar}">Sugar</td>
+<td th:text="${cereal.fat}">Fat</td>
+<td th:text="${cereal.saturates}">Saturates</td>
+<td th:text="${cereal.fibre}">Fibre</td>
+<td th:text="${cereal.sodium}">Sodium</td>
+<td th:text="${cereal.salt}">Salt</td>
+<td th:text="${cereal.iron}">Iron</td>
 </tbody>
 </table>
 
