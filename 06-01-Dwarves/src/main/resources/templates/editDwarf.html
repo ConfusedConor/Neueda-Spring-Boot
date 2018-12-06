@@ -1,0 +1,34 @@
+<!Doctype HTML>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<title th:text="${pageTitle}">Dwarfs</title>
+<!-- Import -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/styles.css" />
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Infant|Fanwood+Text|Great+Vibes" rel="stylesheet" />
+</head>
+<body>
+<nav th:replace="layouts/nav :: navFragment"></nav>
+<div class="Container darkContainer">
+<!-- Table -->
+<form class="form-horizontal" th:action="@{/save}" method="post">
+<table class = "table striped">
+<tr><td>Dwarf ID</td><td><input type="text" readonly ="readonly" class="form-control" th:field="${dwarf.dwarfId}"></input></td></tr>
+<tr><td>Name</td><td>	<input type="text" class="form-control" th:field="${dwarf.name}" /><span th:if="${#fields.hasErrors('dwarf.name')}" th:errors="${dwarf.name}" th:class="help-block">Name Cannot Be Empty</span></td></tr>
+<tr><td>Author</td><td>	<input type="text" class="form-control" th:field="${dwarf.author}" /></td></tr>
+<tr><td>Image</td><td> 	<input type="text" class="form-control" th:field="${dwarf.image}" /></td></tr>
+<tr><td></td><td><button type="submit" class="btn btn-primary btn-lg">Finished Up here, Save my changes!</button></td></tr>
+</table>
+</form>
+</div><!-- End of Dark Container -->
+</body>
+
+<!-- Import Bootstrap Componenets -->
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>
