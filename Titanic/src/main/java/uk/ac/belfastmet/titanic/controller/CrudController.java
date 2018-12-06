@@ -68,7 +68,7 @@ public class CrudController {
 				else {
 				Passenger savedPassenger = this.passengerRepository.save(passenger);
 				//redirectattributes.addFlashAttribute("message", "New Passenger Record Created!");
-				return "redirect:/individual/"+savedPassenger.getPassengerId();
+				return "redirect:/view/"+savedPassenger.getPassengerId();
 				}		
 				}
 	}
