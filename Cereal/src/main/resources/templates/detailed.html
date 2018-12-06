@@ -1,0 +1,40 @@
+<!Doctype HTML>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="alert alert-success" role="alert" th:if="${message}">
+<p th:text="${message}" style="strong; font-size 20;"></p>
+</div>
+<nav th:replace="layouts/resources :: navFragment"></nav>
+<div class="container-fluid">
+
+<table class = "table striped">
+	<tr><td>Cereal I.D</td><td th:text="${cereal.cerealId}">I.D.</td></tr>
+	<tr><td>Manufacturer</td><td th:text="${cereal.manufacturer}">Manufacturer</td></tr>
+	<tr><td>Cereal</td><td th:text="${cereal.cereal}">Cereal Name</td></tr>
+	<tr><td>Energy (kJ)</td><td th:text="${cereal.energyKj}">Energy</td></tr>
+	<tr><td>Energy (kCal)</td><td th:text="${cereal.energyKcal}">Energy</td></tr>
+	<tr><td>Protein (g)</td><td th:text="${cereal.protein}">Protein</td></tr>
+	<tr><td>Carbohydrate (g)</td><td th:text="${cereal.carbohydrate}">Carbs</td></tr>
+	<tr><td>Sugars (g)</td><td th:text="${cereal.sugar}">Sugar</td></tr>
+	<tr><td>Fat (g)</td><td th:text="${cereal.fat}">Fat</td></tr>
+	<tr><td>Saturated Fat (g)</td><td th:text="${cereal.saturates}">Saturates</td></tr>
+	<tr><td>Fibre (g)</td><td th:text="${cereal.fibre}">Fibre</td></tr>
+	<tr><td>Sodium (g)</td><td th:text="${cereal.sodium}">Sodium</td></tr>
+	<tr><td>Salt (g)</td><td th:text="${cereal.salt}">Salt</td></tr>
+	<tr><td>Iron (mg)</td><td th:text="${cereal.iron}">Iron</td></tr>
+	
+</table>
+
+</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>
