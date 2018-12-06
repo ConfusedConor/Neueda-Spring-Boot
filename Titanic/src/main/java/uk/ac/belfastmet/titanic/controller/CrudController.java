@@ -66,9 +66,9 @@ public class CrudController {
 					return "editPassenger";
 				}
 				else {
-				Passenger savedPassenger= this.passengerRepository.save(passenger);
+				Passenger savedPassenger = this.passengerRepository.save(passenger);
 				//redirectattributes.addFlashAttribute("message", "New Passenger Record Created!");
-				return "redirect:/individual/"+passenger.getPassengerId();
+				return "redirect:/individual/"+savedPassenger.getPassengerId();
 				}		
 				}
 	}
