@@ -1,7 +1,7 @@
 package uk.ac.belfastmet.consumer.domain;
 
 import java.util.ArrayList;
-
+@Data
 public class AllPassengers {
 private ArrayList<Passenger> allPassengers;
 

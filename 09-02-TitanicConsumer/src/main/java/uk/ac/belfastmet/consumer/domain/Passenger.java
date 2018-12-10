@@ -2,7 +2,7 @@ package uk.ac.belfastmet.consumer.domain;
 
 
 
-
+@Data
 public class Passenger {
 
 	private Integer passengerId;
