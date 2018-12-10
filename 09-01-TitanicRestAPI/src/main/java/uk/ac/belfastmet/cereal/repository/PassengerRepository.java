@@ -6,4 +6,8 @@ import uk.ac.belfastmet.cereal.domain.Passenger;
 
 public interface PassengerRepository  extends CrudRepository<Passenger, Integer>{
 
+	Passenger findByPassengerId(Integer passengerId);
+
+	void deleteByPassengerId(Integer passengerId);
+
 }
