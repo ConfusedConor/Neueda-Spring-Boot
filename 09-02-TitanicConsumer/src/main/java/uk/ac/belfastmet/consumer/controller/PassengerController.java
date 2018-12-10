@@ -14,7 +14,7 @@ import uk.ac.belfastmet.consumer.service.PassengerService;
 @Controller
 @RequestMapping("/titanic")
 public class PassengerController {
-	@Autowired
+	//@Autowired
 	PassengerService passengerService;
 AllPassengers allPassengers;
 
@@ -26,7 +26,6 @@ public PassengerController(PassengerService passengerService, AllPassengers allP
 @GetMapping("/{passengerId}")
 public String viewPassenger(@PathVariable("passengerId") Integer passengerId, Model model) {
 	model.addAttribute("pageTitle", "View Passenger");
-	RestTemplate restTemplate = new RestTemplate();
 	Passenger passenger= this.passengerService.get(passengerId);
 	model.addAttribute("passenger", passenger);
 	
