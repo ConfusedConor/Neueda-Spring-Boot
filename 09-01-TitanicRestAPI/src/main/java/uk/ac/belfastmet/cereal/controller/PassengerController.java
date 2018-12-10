@@ -31,7 +31,7 @@ public Passenger getPassengers(@PathVariable("passengerId") Integer passengerId)
 	return this.passengerRepository.findByPassengerId(passengerId);
 }
 
-//Not Working
+
 @PutMapping("passengers/{passengerId}")
 public Passenger updatePassenger(@PathVariable("passengerId") Integer passengerId, @RequestBody Passenger passenger )	{
 return this.passengerRepository.save(passenger);	
@@ -40,7 +40,7 @@ return this.passengerRepository.save(passenger);
 //Not Working
 @DeleteMapping("passengers/{passengerId}")
 public String deletePassengers(@PathVariable("passengerId") Integer passengerId) {
-	this.passengerRepository.deleteByPassengerId(passengerId);
+	this.passengerRepository.deleteById(passengerId);
 	return "{\"Delete\" : \"Success\", \"Record\": "+ passengerId + "}";
 }
 
