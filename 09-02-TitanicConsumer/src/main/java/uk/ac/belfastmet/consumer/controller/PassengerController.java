@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.client.RestTemplate;
+
 
 import uk.ac.belfastmet.consumer.domain.AllPassengers;
 import uk.ac.belfastmet.consumer.domain.Passenger;
@@ -14,7 +14,7 @@ import uk.ac.belfastmet.consumer.service.PassengerService;
 @Controller
 @RequestMapping("/titanic")
 public class PassengerController {
-	//@Autowired
+	@Autowired
 	PassengerService passengerService;
 AllPassengers allPassengers;
 
