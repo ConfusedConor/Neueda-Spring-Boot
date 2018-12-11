@@ -3,54 +3,58 @@ package uk.ac.belfastmet.consumer.service;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.util.UriComponentsBuilder;
 
 import uk.ac.belfastmet.consumer.domain.AllPassengers;
 import uk.ac.belfastmet.consumer.domain.Passenger;
-
+@Service
 public class PassengerServiceImpl implements PassengerService {
 	@Value("${api.passenger.url}")
-	private String passengerUrl;
+	private String apiUrl;
 	private RestTemplate restTemplate;
-	public PassengerServiceImpl(String passengerUrl, RestTemplate restTemplate) {
-		super();
-		this.passengerUrl = passengerUrl;
-		this.restTemplate = restTemplate;
-	}
-	public String getPassengerUrl() {
-		return passengerUrl;
-	}
-	public void setPassengerUrl(String passengerUrl) {
-		this.passengerUrl = passengerUrl;
-	}
-	public RestTemplate getRestTemplate() {
-		return restTemplate;
-	}
-	public void setRestTemplate(RestTemplate restTemplate) {
-		this.restTemplate = restTemplate;
-	}
 	
-	//public Passenger get(Integer passengerId) {}
+	//Constructor
+	public PassengerServiceImpl(RestTemplate restTemplate) {
+		super();
+		this.restTemplate = restTemplate;
+	}
 	
 	public ArrayList<Passenger> list(){
-		UriComponentsBuilder getAllPassengersUri = UriComponentsBuilder.fromUriString("http://localhost8090/passengers");
-		AllPassengers allPassengers = this.restTemplate.getForObject(getAllPassengersUri.toString(), AllPassengers.class);
+		String listPassengerUrl= this.apiUrl +"/passengers";
+		AllPassengers allPassengers = this.restTemplate.getForObject(listPassengerUrl, AllPassengers.class);
 		return allPassengers.getAllPassengers();
 		}
 	
 	
-	public Passenger add(Passenger passenger, Integer passengerId) {
-	return null;}
-	public Passenger update(Passenger passenger, Integer passengerId) {
-	return null;}
-	public void delete(Integer passengerId){}
-	
-	public Passenger get(Integer PassengerID) {
-		UriComponentsBuilder getPassengerUrl = UriComponentsBuilder.fromUriString("http://localhost:8090/passenger/10");
-		this.restTemplate.getForObject(getPassengerUrl.toString() , Passenger.class);
-		
-		return null;
+	//Get
+	public Passenger get(Integer passengerId) {
+		String getPassengerUrl = this.apiUrl + "/passengers/" + passengerId;
+		Passenger passenger =this.restTemplate.getForObject(getPassengerUrl, Passenger.class);
+		return passenger;
 	}
+	
+	//add
+	@Override
+	public Passenger add(Passenger passenger) {
+		String addPassengerURL = this.apiUrl + "/passengers/" + passenger.getPassengerId();
+		this.restTemplate.postForObject(addPassengerURL, passenger, Passenger.class);
+		return passenger;
+	}
+	
+	//update
+	@Override
+	public Passenger update(Passenger passenger) {
+		String updatePassengerURL = this.apiUrl + "/passengers/" + passenger.getPassengerId();
+		this.restTemplate.put(updatePassengerURL, passenger, Passenger.class);
+		return passenger;
+	}
+
+	public void delete(Integer passengerId){
+			String deletePassengerURL = this.apiUrl + "/passengers/" + passengerId;
+			this.restTemplate.delete(deletePassengerURL);
+	}
+	
+	
 }
 

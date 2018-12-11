@@ -2,7 +2,6 @@ package uk.ac.belfastmet.consumer.domain;
 
 
 
-@Data
 public class Passenger {
 
 	private Integer passengerId;
@@ -17,7 +16,8 @@ public class Passenger {
 	private String fare;
 	private String cabin;
 	private String embarked;
-
+	//Constructors
+	
 	public Passenger() {
 		super();
 	}
@@ -38,10 +38,11 @@ public class Passenger {
 		this.embarked = embarked;
 	}
 
+	//Getters & Setters
 	public Integer getPassengerId() {
 		return passengerId;
 	}
-
+	//Delete below to make passengerId Read-only
 	public void setPassengerId(Integer passengerId) {
 		this.passengerId = passengerId;
 	}
