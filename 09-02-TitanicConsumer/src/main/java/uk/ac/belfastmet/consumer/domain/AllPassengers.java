@@ -3,8 +3,13 @@ package uk.ac.belfastmet.consumer.domain;
 import java.util.ArrayList;
 
 public class AllPassengers {
-private ArrayList<Passenger> allPassengers;
+	
+private ArrayList<Passenger> allPassengers;	
 
+
+public AllPassengers() {
+		super();
+	}
 public AllPassengers(ArrayList<Passenger> allPassengers) {
 	super();
 	this.allPassengers = allPassengers;

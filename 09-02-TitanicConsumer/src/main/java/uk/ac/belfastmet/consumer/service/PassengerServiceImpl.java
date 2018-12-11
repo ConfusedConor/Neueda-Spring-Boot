@@ -1,7 +1,6 @@
 package uk.ac.belfastmet.consumer.service;
 
 import java.util.ArrayList;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -9,6 +8,7 @@ import org.springframework.web.client.RestTemplate;
 import uk.ac.belfastmet.consumer.domain.AllPassengers;
 import uk.ac.belfastmet.consumer.domain.Passenger;
 @Service
+
 public class PassengerServiceImpl implements PassengerService {
 	@Value("${api.passenger.url}")
 	private String apiUrl;
@@ -35,7 +35,6 @@ public class PassengerServiceImpl implements PassengerService {
 	}
 	
 	//add
-	@Override
 	public Passenger add(Passenger passenger) {
 		String addPassengerURL = this.apiUrl + "/passengers/" + passenger.getPassengerId();
 		this.restTemplate.postForObject(addPassengerURL, passenger, Passenger.class);
@@ -43,7 +42,6 @@ public class PassengerServiceImpl implements PassengerService {
 	}
 	
 	//update
-	@Override
 	public Passenger update(Passenger passenger) {
 		String updatePassengerURL = this.apiUrl + "/passengers/" + passenger.getPassengerId();
 		this.restTemplate.put(updatePassengerURL, passenger, Passenger.class);
@@ -53,6 +51,12 @@ public class PassengerServiceImpl implements PassengerService {
 	public void delete(Integer passengerId){
 			String deletePassengerURL = this.apiUrl + "/passengers/" + passengerId;
 			this.restTemplate.delete(deletePassengerURL);
+	}
+
+	public Passenger getAllPassengers() {
+		String getPassengerUrl = this.apiUrl + "/passengers";
+		Passenger passenger =this.restTemplate.getForObject(getPassengerUrl, Passenger.class);
+		return passenger;
 	}
 	
 	

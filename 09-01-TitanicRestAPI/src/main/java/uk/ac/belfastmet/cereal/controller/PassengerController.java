@@ -1,5 +1,8 @@
 package uk.ac.belfastmet.cereal.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,10 +25,18 @@ public PassengerController(PassengerRepository passengerRepository) {
 		super();
 		this.passengerRepository = passengerRepository;
 	}
+
+
 @GetMapping("passengers")
-public Iterable<Passenger> getAllPassengers() {
-	return this.passengerRepository.findAll();	
+public Map<String, Object> getAllPassengers(){
+	Map<String, Object> passengerMap = new HashMap<String, Object>();
+	passengerMap.put("allPassengers", this.passengerRepository.findAll());
+	return passengerMap;
 }
+
+//public Iterable<Passenger> getAllPassengers() {
+//	return this.passengerRepository.findAll();	
+//}
 @GetMapping("passengers/{passengerId}")
 public Passenger getPassengers(@PathVariable("passengerId") Integer passengerId) {
 	return this.passengerRepository.findByPassengerId(passengerId);
