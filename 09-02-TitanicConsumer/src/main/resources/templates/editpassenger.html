@@ -12,7 +12,7 @@
 <p th:text="${message}" style="strong; font-size 20;"></p>
 </div>
 <div class="container-fluid">
-<form class="form-horizontal" th:action="@{/save}" method="post">
+<form class="form-horizontal" th:action="@{/titanic/passengers/save}" method="post">
 <table class = "table striped" >
 <tr><td>Passenger I.D.</td><td><input type="text" readonly ="readonly" class="form-control" th:field="${passenger.passengerId}" /></td></tr>
 <tr><td>Name</td><td><input type="text" class="form-control" th:field="${passenger.name}" /><span th:if="${#fields.hasErrors('passenger.name')}" th:errors="${passenger.name}" th:class="help-block">Name Cannot Be Empty</span></td></tr>
@@ -26,4 +26,16 @@
 <tr><td>Fare</td><td><input type="text" class="form-control" th:field="${passenger.fare}"></td></tr>
 <tr><td>Cabin Number</td><td><input type="text" class="form-control" th:field="${passenger.cabin}"></td></tr>
 <tr><td>Where Did they Embark From?</td><td><input type="text" class="form-control" th:field="${passenger.embarked}"></td></tr>
+<tr><td></td><td><button type="submit" class="btn btn-primary btn-lg">Submit Edit.</button></td></tr>
 <tr><td></td>
+</table>
+</form>
+
+</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>
+
