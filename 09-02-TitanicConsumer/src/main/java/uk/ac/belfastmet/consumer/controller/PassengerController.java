@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import uk.ac.belfastmet.consumer.domain.AllPassengers;
 import uk.ac.belfastmet.consumer.domain.Passenger;
@@ -75,7 +76,7 @@ public class PassengerController {
 		model.addAttribute("passenger", passenger);
 		return "editpassenger";
 	}
-
+	//Save
 	@PostMapping("/passengers/save")
 	public String save(Passenger passenger, @RequestParam("addUpdate") String addUpdate, Model model) {
 	if(addUpdate.equals("Add Passenger")) {
@@ -85,6 +86,15 @@ public class PassengerController {
 	else {
 		this.passengerService.update(passenger);
 		return "redirect:/titanic/view/" + passenger.getPassengerId();
+	}
+
+	}
+	@GetMapping("/passengers/delete/{passengerId}")
+	public String deletePassenger(@PathVariable("passengerId") Integer passengerId, Model model, RedirectAttributes redirectAttributes){
+	{
+		this.passengerService.delete(passengerId);
+		redirectAttributes.addFlashAttribute("message", "Passenger Deleted Successfully");
+		return "redirect:/titanic/passengers";
 	}
 	}
 }
