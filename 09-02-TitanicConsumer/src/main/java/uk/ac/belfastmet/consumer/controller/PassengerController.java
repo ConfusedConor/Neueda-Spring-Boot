@@ -24,19 +24,18 @@ public class PassengerController {
 	public PassengerController() {
 		super();
 	}
-
 	public PassengerController(PassengerServiceImpl passengerService, AllPassengers allPassengers) {
 		super();
 		this.passengerService = passengerService;
 		this.allPassengers = allPassengers;
 	}
-
 	public PassengerController(PassengerServiceImpl passengerService) {
 		super();
 		this.passengerService = passengerService;
 	}
 
 	
+	//Viewing All Passengers
 	@GetMapping("/passengers")
 	public String allPassengers(Model model) {
 		ArrayList<Passenger> passenger = this.passengerService.list();
@@ -44,7 +43,7 @@ public class PassengerController {
 		model.addAttribute("passenger", passenger);
 		return "passengers";
 	}
-	
+	//Viewing One Passenger
 	@GetMapping("/{passengerId}")
 	public String viewPassenger(@PathVariable("passengerId") Integer passengerId, Model model) {
 		model.addAttribute("pageTitle", "View Passenger");
@@ -54,6 +53,17 @@ public class PassengerController {
 		return "passenger";
 
 	}
+	//Editing One passenger
+	@GetMapping("passengers/edit/{passengerId}")
+	public String editPassenger(@PathVariable("passengerId") Integer passengerId, Model model)	{
+		Passenger passenger = this.passengerService.get(passengerId);
+		model.addAttribute("pageTitle", "Edit A Record");
+		model.addAttribute("passenger", this.passengerService.update(passenger));
+	return "editpassenger";	
+	}
+	
+	
+
 	//@GetMapping("/add")
 //	public String addPassenger(Integer passengerId, Model model) {
 //		model.addAttribute("pageTitle", "Add Passenger");
