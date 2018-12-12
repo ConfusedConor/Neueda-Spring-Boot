@@ -1,0 +1,46 @@
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<title th:text="${pageTitle}"> Events</title>
+<!-- Import -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+</head>
+
+<body>
+<div class="container-fluid">
+<nav th:replace="layouts/nav :: navFragment"></nav>
+<!-- Card -->
+<div class="card" style="width: 18rem;" th:each="event: ${event}">
+<div class="card-header">
+    <h5 class="card-title" th:text="${event.title}">Event</h5>
+  </div>
+  <img src="" th:src="${event.image}" class="card-img-top" style="height: 90px; width: 90px;">
+  <div class="card-body">
+    <p class="card-text" th:utext="${event.content}">Content</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><h5>Start Date:</h5><p th:text="${event.startDate}">Start Date</p></li>
+    <li class="list-group-item"><h5>End Date:</h5><p th:text="${event.endDate}">End Date</p></li>
+    <li class="list-group-item"><h5>Theme:</h5><p th:text="${event.theme}">Theme</p></li>
+    <li class="list-group-item"><h5>Venue:</h5><p th:text="${event.venue}">Venue</p></li>
+    <li class="list-group-item"><h5>Venue URL:</h5><p th:text="${event.venueUrl}">Venue Url</p></li>
+    <li class="list-group-item"><h5>Cost: </h5><p th:text="${event.cost}">Cost</p></li>
+    <li class="list-group-item"><h5>audience:</h5><p th:text="${event.audience}">Wind</p></li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+
+
+
+
+</div>
+</body>
+<!-- Import Bootstrap Componenets -->
+
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</html>
