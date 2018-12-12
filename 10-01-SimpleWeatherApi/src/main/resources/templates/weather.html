@@ -1,0 +1,50 @@
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<title th:text="${pageTitle}"> Weather</title>
+<!-- Import -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+</head>
+
+<body>
+<div class="container-fluid">
+<nav th:replace="layouts/nav :: navFragment"></nav>
+<!-- Card -->
+<div class="card" style="width: 18rem;">
+<div class="card-header">
+    <h5 class="card-title" th:text="${todaysWeather.location.name}">Place</h5>
+  </div>
+  <img src="" th:src="${todaysWeather.weather.image}" class="card-img-top" style="height: 90px; width: 90px;">
+  <div class="card-body">
+    <p class="card-text" th:text="${todaysWeather.weather.description}">Weather Description</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><h5>Temperature:</h5><p th:text="${todaysWeather.weather.temperature}">Temperature</p></li>
+    <li class="list-group-item"><h5>Precipitation:</h5><p th:text="${todaysWeather.weather.precipitation}">Precipitation</p></li>
+    <li class="list-group-item"><h5>Humidity:</h5><p th:text="${todaysWeather.weather.humidity}">Humidity</p></li>
+    <li class="list-group-item"><h5>Temperature:</h5><p th:text="${todaysWeather.weather.temperature}">Temperature</p></li>
+    <li class="list-group-item"><h5>Pressure:</h5><p th:text="${todaysWeather.weather.pressure}">Pressure</p></li>
+    <li class="list-group-item"><h5>Cloudcover: </h5><p th:text="${todaysWeather.weather.cloudcover}">Cloud Cover</p></li>
+    <li class="list-group-item"><h5>Wind:</h5><p th:text="${todaysWeather.weather.wind}">Wind</p></li>
+    
+    
+    
+    
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+
+
+
+
+</div>
+</body>
+<!-- Import Bootstrap Componenets -->
+
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</html>
