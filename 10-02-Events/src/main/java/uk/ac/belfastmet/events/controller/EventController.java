@@ -41,6 +41,8 @@ public class EventController {
 		model.addAttribute("events", allEvents.getAllEvents());
 		return "eventsPage";
 	}
+	
+	//The following Segment just does not work...
 	@GetMapping("/event/{identifier}")
 	public String oneEvent(@PathVariable("identifier") String identifier, Model model) {
 		model.addAttribute("pageTitle", "All Events");
