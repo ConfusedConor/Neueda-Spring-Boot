@@ -1,21 +1,13 @@
 package uk.ac.belfastmet.events.domain;
 
-import java.util.ArrayList;;
+import java.util.ArrayList;
 
+import lombok.Data;
+
+@Data
 public class AllEvents {
 	
 private ArrayList<Event> allEvents;	
-	//Constructors
-	public AllEvents() {
-		super();
-	}
-	public AllEvents(ArrayList<Event> allEvents) {
-		super();
-		this.allEvents = allEvents;
-	}
-	public ArrayList<Event> getAllEvents() {
-		return allEvents;
-	}
 
 	public Event getEventWithId(String identifier) {
 		for (int i=0; i<this.allEvents.size(); i++) {
@@ -25,5 +17,10 @@ private ArrayList<Event> allEvents;
 			}
 		}
 		return null;
+	}
+	
+	
+	public String toString() {
+		return this.allEvents.toString();
 	}
 }

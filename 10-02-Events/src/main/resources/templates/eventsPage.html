@@ -9,7 +9,7 @@
 <div class="container-fluid">
 <nav th:replace="layouts/nav :: navFragment"></nav>
 <!-- Card -->
-<div class="card" style="width: 18rem;" th:each="event: ${event}">
+<div class="card" style="width: 18rem;" th:each="event: ${events}">
 <div class="card-header">
     <h5 class="card-title" th:text="${event.title}">Event</h5>
   </div>
